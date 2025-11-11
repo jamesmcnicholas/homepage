@@ -1,0 +1,30 @@
+<head>
+  <style>
+      .button {
+          background-color: #f44336; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+      }
+  </style>
+  <script>
+      
+  </script>
+</head>
+<body style="display:block; text-align: center;" id="content">
+  <p id="content">
+      Enter details of your situation below, then press the button <br>
+      <input style="width: 400px; height: 800px"/><br>
+      <p/>
+      <button 
+      class="button button1" 
+      onclick="
+          document.getElementById('content').innerHTML = 'YES!'; 
+          document.getElementById('content').style.fontSize = 800;
+          ">Should I ask for help?</button>
+  </p> 
+</body>
