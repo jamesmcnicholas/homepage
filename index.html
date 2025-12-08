@@ -1,71 +1,169 @@
-<html>
-    <div style="white-space: pre-wrap;">
-        📁 James McNicholas
-        ├─ 📁 Work
-        │  ├─ 📂 <b>IG Group - Senior Software Engineer (2022 - Present)</b>
-        │  │  ├─• Low Latency Java // FIX Protocol
-        │  │  ├─• On Call - Fault Finding & Incident Diagnosis
-        │  │  ├─• Running projects, developed in house tools for real issues, conducted interviews
-        │  │  ├─• Order execution, Vendor management, Regulatory Compliance
-        │  │  ├─• AI Workflow integration, MCPs, Custom AI code review CI/CD pipeline
-        │  │  
-        │  ├─ 📂 <b>CGI - Software Engineer (2018 - 2022)</b>
-        │  │  ├─• Java, Python, C#, some JS
-        │  │  ├─• Satcom & Space Data Platforms
-        │  │  ├─• OneWeb Satellite Megaconstellation
-        │  │  ├─• Developed automated regression test suite with dynamic image recognition
-        │  
-        ├─ 📁 Education
-        │  ├─ 📂 <b>BSc (Hons) Digital & Technology Solutions (University of Winchester, 2018-2021)</b>
-        │  │  ├─• 1st Class Honours
-        │  │  ├─• Software Development & Business Management
-        │
-        ├─ 📂 Links
-        │  │  ├─• <a href="CV_2025.pdf">Full CV</a>
-        │  │  ├─• <a href="https://www.linkedin.com/in/james-mcnicholas-14363a158/">Linkedin</a>
-        │  │  ├─• Email: james.mcnicholas26@gmail.com
-        │
-        ├─ 📂 Software Projects
-        │  ├─• assistant - google assistant webhook to trigger other projects
-        │  ├─• audiosplit - voice activated speedrun timer
-        │  ├─• baddersbot - CRUD'dy badminton club session management website
-        │  ├─• batchprep - webapp for generating meal prep ideas
-        │  ├─• buspy - tracking buses on my local route in real time and projecting their position onto an LED strip
-        │  ├─• circuitpython - various raspberry pi pico projects (mostly halloween costume related)
-        │  ├─• combine - normalise & combine bank statements from different banks for analysis
-        │  ├─• defrag - tinder for your photo bin (swipe to delete)
-        │  ├─• globy: phoenix - rewrite of Globy (2005, PC) using Unity & all the hacky stuff that comes with rewriting an early 00's Blitz3D game
-        │  ├─• <a href="helpbutton.html">helpbutton</a> for your junior dev with imposter syndrome 
-        │  ├─• <a href="https://github.com/jamesmcnicholas/onlydms">onlydms</a> - instagram but only the DM page, blocks redirects anywhere else. No posts. No Reels.
-        │  ├─• farmmade - small foray into making a LibGDX (Java OpenGL Library) game
-        │  ├─• marbleposter - small collage of a pretty good 2 years
-        │  ├─• rubiks - i'm holding onto this one, but think rubiks cube translated to an led matrix, wall mounted
-        │  ├─• sheltered - uni CRUD animal shelter management app
-        │  ├─• shredlines - mutilating headlines for my own enjoyment
-        │  ├─• simplehomepage - <-- you are here
-        │  ├─• svg2png - does what it says on the tin... badly
-        │  ├─• tetris - teaching matt python by rewriting tetris in python + pygame
-        │  ├─• tetrisLED - expanding the above by making it run on a 40x20 LED matrix
-        │  ├─• <a href="https://github.com/jamesmcnicholas/objectris">tetrisWeb</a> - expanding the above by adding multiplayer & browser compilation
-        │  ├─• ...lots more
-        │
-        ├─ 📂 Hobbies
-        │  ├─ 📂 Music
-        │  │  ├─• <a href="https://open.spotify.com/playlist/6WpuFd5SYhu8uYiokzvLmF?si=03Y3IOv1RkCZEdKqLujeJQ">Jazz</a>
-        │  │  ├─• <a href="https://open.spotify.com/playlist/1VIMmXApjKEw8umiEdCiit?si=V-uIOlAGQF-EDo5svAiWtw">Hip-Hop</a>
-        │  │  ├─• <a href="https://open.spotify.com/playlist/2Y4xxowQhYw6bUsQUq2ITv?si=wJfyoI_tQuCPMLtj75WsNw">Indie</a>
-        │  │  ├─• <a href="https://open.spotify.com/playlist/49F54IOT1wh8Iq6Auih65V?si=6b3ed64c7ac749a2&pt=b8a1a8434c1df4d25de2505e7831872b">White girl pop</a>
-        │  │  ├─• <a href="https://youtube.com/playlist?list=PL9scXUm7fbSI0OZT64xy7knoolQ8ly3uJ&si=_S7Lm1oMWoppwGL4">Esoteric youtube recommendations</a>
-        │  ├─• Badminton
-        │  ├─• Making (physical & digital) (See /Projects/ above) 
-        │  ├─• Photography (new!)
-        │  ├─• Houseplants
-        │  ├─• Cycling
-        │  ├─• Exploring new cities
-        │  ├─• Gym
-        │  ├─• Reading (<a href="https://www.goodreads.com/user/show/183184047-james">goodreads</a>)
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James McNicholas - Simple Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📁 C:\Users\James McNicholas\Site\index.html</h1>
+        <ul class="tree">
+            <li class="branch">
+                <div class="row">
+                    <button class="toggle" aria-expanded="true" aria-controls="work-children">▾</button>
+                    <span class="label">📁Work</span>
+                </div>
+                <ul class="children" id="work-children">
+                    <li class="branch">
+                        <div class="row">
+                            <button class="toggle" aria-expanded="true" aria-controls="ig-group-children">▾</button>
+                            <span class="label">📂 IG Group - Senior Software Engineer (2022 - Present)</span>
+                        </div>
+                        <ul class="children" id="ig-group-children">
+                            <li class="leaf">Low Latency Java // FIX Protocol</li>
+                            <li class="leaf">On Call - Fault Finding & Incident Diagnosis</li>
+                            <li class="leaf">Running projects, developed in house tools for real issues, conducted interviews</li>
+                            <li class="leaf">Order execution, Vendor management, Regulatory Compliance</li>
+                            <li class="leaf">AI Workflow integration, MCPs, Custom AI code review CI/CD pipeline</li>
+                        </ul>
+                    </li>
+                    <li class="branch">
+                        <div class="row">
+                            <button class="toggle" aria-expanded="true" aria-controls="cgi-children">▾</button>
+                            <span class="label">📂 CGI - Software Engineer (2018 - 2022)</span>
+                        </div>
+                        <ul class="children" id="cgi-children">
+                            <li class="leaf">Java, Python, C#, some JS</li>
+                            <li class="leaf">Satcom & Space Data Platforms</li>
+                            <li class="leaf">OneWeb Satellite Megaconstellation</li>
+                            <li class="leaf">Developed automated regression test suite with dynamic image recognition</li>
+                        </ul>
+                    </li>
+                    <li class="branch collapsed">
+                        <div class="row">
+                            <button class="toggle" aria-expanded="true" aria-controls="cgi-children">▾</button>
+                            <span class="label">📂 WireITFree - Computer Engineer(2017 - 2018)</span>
+                        </div>
+                        <ul class="children" id="cgi-children">
+                            <li class="leaf">Contract support technician</li>
+                            <li class="leaf">On-site and remote hardware & software support for clients in the Hampshire area</li>
+                        </ul>
+                    </li>
+                    <li class="branch collapsed">
+                        <div class="row">
+                            <button class="toggle" aria-expanded="true" aria-controls="cgi-children">▾</button>
+                            <span class="label">📂 Avondale Tennis Club - Assistant Tennis Coach (2015-2016)</span>
+                        </div>
+                        <ul class="children" id="cgi-children">
+                            <li class="leaf">Qualified L1 Tennis Leader</li>
+                            <li class="leaf">Assisted running tennis lessons for U16s</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="branch collapsed">
+                <div class="row">
+                    <button class="toggle" aria-expanded="true" aria-controls="education-children">▾</button>
+                    <span class="label">📁Education</span>
+                </div>
+                <ul class="children" id="education-children">
+                    <li class="branch">
+                        <div class="row">
+                            <button class="toggle" aria-expanded="true" aria-controls="bsc-children">▾</button>
+                            <span class="label">📂 BSc (Hons) Digital &amp; Technology Solutions (University of Winchester, 2018-2021)</span>
+                        </div>
+                        <ul class="children" id="bsc-children">
+                            <li class="leaf">1st Class Honours</li>
+                            <li class="leaf">Software Development &amp; Business Management</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="branch">
+                <div class="row">
+                    <button class="toggle" aria-expanded="true" aria-controls="links-children">▾</button>
+                    <span class="label">📁Links</span>
+                </div>
+                <ul class="children" id="links-children">
+                    <li class="leaf"><a href="CV_2025.pdf">Full CV</a></li>
+                    <li class="leaf"><a href="https://www.linkedin.com/in/james-mcnicholas-14363a158/">LinkedIn</a></li>
+                    <li class="leaf">Email: <a href="mailto:james.mcnicholas26@gmail.com">james.mcnicholas26@gmail.com</a></li>
+                </ul>
+            </li>
+            <li class="branch collapsed">
+                <div class="row">
+                    <button class="toggle" aria-expanded="true" aria-controls="projects-children">▾</button>
+                    <span class="label">📁Software Projects</span>
+                </div>
+                <ul class="children" id="projects-children">
+                    <li class="leaf">assistant - google assistant webhook to trigger other projects</li>
+                    <li class="leaf">audiosplit - voice activated speedrun timer</li>
+                    <li class="leaf">baddersbot - CRUD'dy badminton club session management website</li>
+                    <li class="leaf">batchprep - webapp for generating meal prep ideas</li>
+                    <li class="leaf">buspy - tracking buses on my local route in real time and projecting their position onto an LED strip</li>
+                    <li class="leaf">circuitpython - various raspberry pi pico projects (mostly halloween costume related)</li>
+                    <li class="leaf">combine - normalise &amp; combine bank statements from different banks for analysis</li>
+                    <li class="leaf">defrag - tinder for your photo bin (swipe left to delete, right to keep)</li>
+                    <li class="leaf">globy: phoenix - rewrite of Globy (2005, PC) using Unity &amp; all the hacky stuff that comes with rewriting an early 00's Blitz3D game</li>
+                    <li class="leaf"><a href="helpbutton.html">helpbutton</a> for your junior dev with imposter syndrome</li>
+                    <li class="leaf">homeassistant - various integraitons for a local-hosted smart home with local LLMs via Ollama (think a dumb JARVIS)</li>
+                    <li class="leaf"><a href="https://github.com/jamesmcnicholas/onlydms">onlydms</a> - instagram but only the DM page, blocks redirects anywhere else. No posts. No Reels. No brainrot.</li>
+                    <li class="leaf">farmmade - small foray into making a LibGDX (Java OpenGL Library) game</li>
+                    <li class="leaf">marbleposter - small collage of a pretty good 2 years</li>
+                    <li class="leaf">rubiks - i'm holding onto this one, but think rubiks cube translated to an led matrix, wall mounted</li>
+                    <li class="leaf">sheltered - uni CRUD animal shelter management app</li>
+                    <li class="leaf">shredlines - mutilating headlines for my own enjoyment</li>
+                    <li class="leaf">simplehomepage - &lt;-- you are here</li>
+                    <li class="leaf">svg2png - does what it says on the tin... badly</li>
+                    <li class="leaf">tetris - teaching matt python by rewriting tetris in python + pygame</li>
+                    <li class="leaf">tetrisLED - expanding the above by making it run on a 40x20 LED matrix</li>
+                    <li class="leaf"><a href="https://github.com/jamesmcnicholas/objectris">tetrisWeb</a> - expanding the above by adding multiplayer &amp; browser compilation</li>
+                    <li class="leaf">...lots more</li>
+                </ul>
+            </li>
+            <li class="branch collapsed">
+                <div class="row">
+                    <button class="toggle" aria-expanded="true" aria-controls="hobbies-children">▾</button>
+                    <span class="label">📁Hobbies</span>
+                </div>
+                <ul class="children" id="hobbies-children">
+                    <li class="branch">
+                        <div class="row">
+                            <button class="toggle" aria-expanded="true" aria-controls="music-children">▾</button>
+                            <span class="label">📂 Music</span>
+                        </div>
+                        <ul class="children" id="music-children">
+                            <li class="leaf"><a href="https://open.spotify.com/playlist/6WpuFd5SYhu8uYiokzvLmF?si=03Y3IOv1RkCZEdKqLujeJQ">Jazz</a></li>
+                            <li class="leaf"><a href="https://open.spotify.com/playlist/1VIMmXApjKEw8umiEdCiit?si=V-uIOlAGQF-EDo5svAiWtw">Hip-Hop</a></li>
+                            <li class="leaf"><a href="https://open.spotify.com/playlist/2Y4xxowQhYw6bUsQUq2ITv?si=wJfyoI_tQuCPMLtj75WsNw">Indie</a></li>
+                            <li class="leaf"><a href="https://open.spotify.com/playlist/49F54IOT1wh8Iq6Auih65V?si=6b3ed64c7ac749a2&pt=b8a1a8434c1df4d25de2505e7831872b">White girl pop</a></li>
+                            <li class="leaf"><a href="https://youtube.com/playlist?list=PL9scXUm7fbSI0OZT64xy7knoolQ8ly3uJ&si=_S7Lm1oMWoppwGL4">Esoteric youtube recommendations</a></li>
+                        </ul>
+                    </li>
+                    <li class="leaf">Badminton</li>
+                    <li class="leaf">Making (physical &amp; digital) (See /Projects/ above)</li>
+                    <li class="leaf">Photography (new!)</li>
+                    <li class="leaf">Houseplants</li>
+                    <li class="leaf">Cycling</li>
+                    <li class="leaf">Exploring new cities</li>
+                    <li class="leaf">Gym</li>
+                    <li class="leaf">Reading (<a href="https://www.goodreads.com/user/show/183184047-james">goodreads</a>)</li>
+                </ul>
+            </li>
+        </ul>
+        <p class="note">hi :)</p>
     </div>
-I think AI is super valuable for learning new things really quickly, but I didn't use it to make this site, nor to earn my degree.
+    <script>
+        document.querySelectorAll('.toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const branch = button.closest('.branch');
+                const collapsed = branch.classList.toggle('collapsed');
+                button.textContent = collapsed ? '▸' : '▾';
+                button.setAttribute('aria-expanded', (!collapsed).toString());
+            });
+        });
+    </script>
+</body>
 </html>

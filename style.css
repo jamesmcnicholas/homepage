@@ -1,0 +1,64 @@
+body {
+    font-family: "Calibri", system-ui, -apple-system, sans-serif;
+    background: #fafafa;
+    color: #111;
+    margin: 0;
+    padding: 24px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+h1 {
+    margin: 0 0 12px;
+    font-size: 26px;
+}
+.tree {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.branch {
+    margin: 4px 0;
+}
+.branch > .row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.toggle {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0;
+}
+.label {
+    font-weight: 600;
+}
+.children {
+    margin: 6px 0 0 22px;
+    padding-left: 12px;
+    border-left: 1px dashed #cfcfcf;
+}
+.branch.collapsed > .children {
+    display: none;
+}
+.leaf {
+    margin-left: 22px;
+    list-style: disc;
+}
+a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.note {
+    margin-top: 24px;
+    color: #444;
+}
