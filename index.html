@@ -5,12 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>James McNicholas - Simple Homepage</title>
+    <title>James McNicholas</title>
 </head>
 <body>
-    <div class="container">
-        <h1>📁 C:\Users\James McNicholas\Site</h1>
-        <ul class="tree">
+    <div class="desktop-icon recycle-bin" aria-label="Recycle Bin">
+        <img class="desktop-icon-image" src="img/bin.png" alt="" aria-hidden="true">
+        <span>Recycle Bin</span>
+    </div>
+    <main class="xp-window xp-explorer" data-draggable-window>
+        <div class="xp-window-titlebar" data-drag-handle>
+            <span class="xp-window-title">📁 James McNicholas</span>
+            <div class="xp-window-controls">
+                <button class="xp-window-minimize" type="button" aria-label="Minimize explorer">_</button>
+                <button type="button" aria-label="Maximize explorer" disabled>□</button>
+                <button type="button" aria-label="Close explorer" disabled>x</button>
+            </div>
+        </div>
+        <div class="xp-menu-bar">
+            <span>File</span>
+            <span>Edit</span>
+            <span>View</span>
+            <span>Favorites</span>
+            <span>Tools</span>
+            <span>Help</span>
+        </div>
+        <div class="xp-toolbar" aria-hidden="true">
+            <button type="button">← Back</button>
+            <button type="button">Search</button>
+            <button type="button">Folders</button>
+        </div>
+        <div class="xp-address-bar">
+            <span>Address</span>
+            <div>C:\Users\James McNicholas\Site</div>
+        </div>
+        <div class="xp-explorer-body">
+            <aside class="xp-sidebar" aria-label="Explorer task pane">
+                <section class="xp-sidebar-section">
+                    <h2>System Tasks</h2>
+                    <a href="CV_2025.pdf">View full CV</a>
+                    <a href="mailto:james.mcnicholas26@gmail.com">Send an email</a>
+                    <a href="https://www.linkedin.com/in/james-mcnicholas-14363a158/">Open LinkedIn</a>
+                </section>
+                <section class="xp-sidebar-section">
+                    <h2>Other Places</h2>
+                    <span>Work</span>
+                    <span>Software Projects</span>
+                    <span>Hobbies</span>
+                </section>
+                <section class="xp-sidebar-section">
+                    <h2>Details</h2>
+                    <p>Personal homepage</p>
+                    <p>Static GitHub Pages site</p>
+                </section>
+            </aside>
+        <div class="container">
+            <ul class="tree">
             <li class="branch">
                 <div class="row">
                     <button class="toggle" aria-expanded="true" aria-controls="work-children">▾</button>
@@ -44,20 +93,20 @@
                     </li>
                     <li class="branch collapsed">
                         <div class="row">
-                            <button class="toggle" aria-expanded="true" aria-controls="cgi-children">▾</button>
+                            <button class="toggle" aria-expanded="false" aria-controls="wireitfree-children">▸</button>
                             <span class="label">📂 WireITFree - Computer Engineer(2017 - 2018)</span>
                         </div>
-                        <ul class="children" id="cgi-children">
+                        <ul class="children" id="wireitfree-children">
                             <li class="leaf">Contract support technician</li>
                             <li class="leaf">On-site and remote hardware & software support for clients in the Hampshire area</li>
                         </ul>
                     </li>
                     <li class="branch collapsed">
                         <div class="row">
-                            <button class="toggle" aria-expanded="true" aria-controls="cgi-children">▾</button>
+                            <button class="toggle" aria-expanded="false" aria-controls="avondale-children">▸</button>
                             <span class="label">📂 Avondale Tennis Club - Assistant Tennis Coach (2015-2016)</span>
                         </div>
-                        <ul class="children" id="cgi-children">
+                        <ul class="children" id="avondale-children">
                             <li class="leaf">Qualified L1 Tennis Leader</li>
                             <li class="leaf">Assisted running tennis lessons for U16s</li>
                         </ul>
@@ -66,7 +115,7 @@
             </li>
             <li class="branch collapsed">
                 <div class="row">
-                    <button class="toggle" aria-expanded="true" aria-controls="education-children">▾</button>
+                    <button class="toggle" aria-expanded="false" aria-controls="education-children">▸</button>
                     <span class="label">📁Education</span>
                 </div>
                 <ul class="children" id="education-children">
@@ -95,7 +144,7 @@
             </li>
             <li class="branch collapsed">
                 <div class="row">
-                    <button class="toggle" aria-expanded="true" aria-controls="projects-children">▾</button>
+                    <button class="toggle" aria-expanded="false" aria-controls="projects-children">▸</button>
                     <span class="label">📁Software Projects</span>
                 </div>
                 <ul class="children" id="projects-children">
@@ -126,7 +175,7 @@
             </li>
             <li class="branch collapsed">
                 <div class="row">
-                    <button class="toggle" aria-expanded="true" aria-controls="hobbies-children">▾</button>
+                    <button class="toggle" aria-expanded="false" aria-controls="hobbies-children">▸</button>
                     <span class="label">📁Hobbies</span>
                 </div>
                 <ul class="children" id="hobbies-children">
@@ -153,18 +202,53 @@
                     <li class="leaf">Reading (<a href="https://www.goodreads.com/user/show/183184047-james">goodreads</a>)</li>
                 </ul>
             </li>
-        </ul>
-        <p class="note">hi :)</p>
+            </ul>
+            <p class="note">hi :)</p>
+        </div>
+        </div>
+    </main>
+    <button class="little-guy" type="button" aria-label="A suspicious little guy">
+        <img src="img/little-guy.png" alt="">
+        <span>little-guy.exe</span>
+    </button>
+    <div class="adventure-shell" aria-live="polite" hidden>
+        <div class="adventure">
+            <div class="adventure-bar">
+                <span class="adventure-title">C:\Users\James\DayOff.exe</span>
+                <button class="adventure-close" type="button" aria-label="Close adventure">x</button>
+            </div>
+            <div class="adventure-body">
+                <h2 class="adventure-scene-title"></h2>
+                <img class="adventure-scene-image" alt="" hidden>
+                <p class="adventure-scene-text"></p>
+                <div class="adventure-choices"></div>
+                <div class="adventure-actions">
+                    <button class="adventure-back" type="button">Back</button>
+                    <button class="adventure-restart" type="button">Restart</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        document.querySelectorAll('.toggle').forEach((button) => {
-            button.addEventListener('click', () => {
-                const branch = button.closest('.branch');
-                const collapsed = branch.classList.toggle('collapsed');
-                button.textContent = collapsed ? '▸' : '▾';
-                button.setAttribute('aria-expanded', (!collapsed).toString());
-            });
-        });
-    </script>
+    <div class="xp-taskbar" aria-label="Windows XP style taskbar">
+        <button class="xp-start" type="button">
+            <span class="xp-start-logo" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <span>start</span>
+        </button>
+        <div class="xp-taskbar-divider" aria-hidden="true"></div>
+        <button class="xp-task xp-task-active" type="button" aria-pressed="true">
+            <span class="xp-task-icon" aria-hidden="true">📁</span>
+            <span>James McNicholas</span>
+        </button>
+        <div class="xp-tray">
+            <span class="xp-tray-icon" aria-hidden="true">▣</span>
+            <time class="xp-clock" aria-label="Current time"></time>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
