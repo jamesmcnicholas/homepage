@@ -424,15 +424,18 @@ a:hover {
 }
 .adventure-ending-image-slot {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
     place-items: center;
     min-height: min(320px, 42vh);
+    padding: 8px;
     border: 1px solid #7f9db9;
     background: #fff;
 }
 .adventure-ending-image {
     display: block;
     width: 100%;
-    max-height: min(320px, 42vh);
+    max-height: min(304px, 40vh);
     object-fit: contain;
 }
 .adventure-ending-caption {
@@ -550,6 +553,9 @@ a:hover {
     overflow: hidden;
     text-align: left;
     text-shadow: 1px 1px 0 rgb(0 0 0 / 35%);
+}
+.xp-task[hidden] {
+    display: none;
 }
 .xp-task span:last-child {
     overflow: hidden;

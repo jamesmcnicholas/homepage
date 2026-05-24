@@ -20,6 +20,7 @@ const clock = document.querySelector('.xp-clock');
 const explorerWindow = document.querySelector('.xp-explorer');
 const minimizeButton = document.querySelector('.xp-window-minimize');
 const explorerTask = document.querySelector('.xp-task');
+const adventureTask = document.querySelector('.adventure-task');
 let topWindowZIndex = 5;
 const littleGuyStops = [
     { top: '170px', left: '104px' },
@@ -33,7 +34,17 @@ const scenes = {
         choices: [
             ['The house is a mess, lets knock off some tasks', 'houseFixes'],
             ['I really need to get outside', 'goOutside'],
-            ['My brain needs a creative outlet right now', 'creativeOutlet']
+            ['My brain needs a creative outlet right now', 'creativeOutlet'],
+            ['Book a flight', 'bookFlight']
+        ]
+    },
+    bookFlight: {
+        title: 'Book a Flight',
+        text: 'The sensible thing would be to compare prices, dates, and annual leave. The little guy has already opened a new tab.',
+        choices: [
+            ['Go skiing in the Alps', 'skiingEnding'],
+            ['Go motorbiking in Vietnam', 'vietnamEnding'],
+            ['Island hopping in the Philippines', 'cityBreakEnding']
         ]
     },
     houseFixes: {
@@ -112,9 +123,27 @@ const scenes = {
         text: 'The lamp works, the dashboard is green, and no one has to know how much of the solution was unplugging it.',
         choices: []
     },
+    skiingEnding: {
+        title: 'Ending: Alps Mode',
+        text: 'You book skiing in the Alps. Everything is suddenly more expensive, but also covered in snow, so it feels worth it.',
+        image: 'img/ski.JPG',
+        choices: []
+    },
+    vietnamEnding: {
+        title: 'Ending: Vietnam on Two Wheels',
+        text: 'You book Vietnam and immediately start watching motorbike route videos. This is either preparation or escalation.',
+        image: 'img/vietnam.JPG',
+        choices: []
+    },
+    cityBreakEnding: {
+        title: 'Ending: Snorkle fiend',
+        text: 'Swimming with a turtle was pretty cool.',
+        images: ['img/philippines-1.JPG', 'img/philippines-2.JPG'],
+        choices: []
+    },
     badmintonEnding: {
         title: 'Ending: Court Time',
-        text: 'You leave the house, hit things over a net, and return with the rare feeling that the day has been used correctly.',
+        text: 'Smashing shuttles is always good for getting out of a funk',
         image: 'img/badminton-ending.png',
         caption: 'Up the Maggs',
         choices: []
@@ -122,6 +151,7 @@ const scenes = {
     bikeEnding: {
         title: 'Ending: Two Wheels',
         text: 'With no long-distance experience, you decide to cycle 100 miles from London to the cliffs od Dover. It takes 12 hours.',
+        image: 'img/dover.JPG',
         choices: []
     },
     jazzEnding: {
@@ -134,6 +164,7 @@ const scenes = {
     photoEnding: {
         title: 'Ending: Professional street photographer',
         text: 'You come back with one good photo and eighty-seven mediocre ones. It\'ll wash out in the edit.',
+        image: 'img/street.JPG',
         choices: []
     },
     matrixEnding: {
@@ -143,7 +174,9 @@ const scenes = {
     },
     costumeEnding: {
         title: 'Ending: Seasonal Engineering',
-        text: 'This working Wii remote costume is one cable tie away from genius and two solder joints ties away from a health hazard.',
+        text: 'Best costume winner 3 years running, obviously.',
+        image: 'img/wii.jpg',
+        caption: 'Making the nunchuck dispense beer was smart to bribe the judges',
         choices: []
     }
 };
@@ -175,14 +208,15 @@ function renderScene(sceneId) {
     if (scene.choices.length === 0) {
         const imageSlot = document.createElement('div');
         imageSlot.className = 'adventure-ending-image-slot';
+        const sceneImages = scene.images || (scene.image ? [scene.image] : []);
 
-        if (scene.image) {
+        sceneImages.forEach((imageSrc) => {
             const image = document.createElement('img');
             image.className = 'adventure-ending-image';
-            image.src = scene.image;
+            image.src = imageSrc;
             image.alt = scene.title;
             imageSlot.appendChild(image);
-        }
+        });
 
         choices.appendChild(imageSlot);
 
@@ -204,6 +238,9 @@ function renderScene(sceneId) {
 
 function openAdventure() {
     adventureShell.hidden = false;
+    adventureTask.hidden = false;
+    adventureTask.classList.add('xp-task-active');
+    adventureTask.setAttribute('aria-pressed', 'true');
     littleGuy.hidden = true;
     history = [];
     renderScene('start');
@@ -211,6 +248,9 @@ function openAdventure() {
 
 function closeAdventure() {
     adventureShell.hidden = true;
+    adventureTask.hidden = true;
+    adventureTask.classList.remove('xp-task-active');
+    adventureTask.setAttribute('aria-pressed', 'false');
     littleGuy.hidden = false;
     littleGuyClicks = 0;
     littleGuy.style.top = '';
@@ -246,6 +286,12 @@ restartButton.addEventListener('click', () => {
 });
 
 closeButton.addEventListener('click', closeAdventure);
+
+adventureTask.addEventListener('click', () => {
+    if (!adventureShell.hidden) {
+        adventureShell.style.zIndex = String(++topWindowZIndex);
+    }
+});
 
 function updateClock() {
     clock.textContent = new Date().toLocaleTimeString([], {
