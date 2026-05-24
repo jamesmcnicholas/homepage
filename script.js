@@ -1,9 +1,32 @@
+function toggleBranch(branch) {
+    const button = branch.querySelector(':scope > .row .toggle');
+    const collapsed = branch.classList.toggle('collapsed');
+    button.textContent = collapsed ? '▸' : '▾';
+    button.setAttribute('aria-expanded', (!collapsed).toString());
+}
+
 document.querySelectorAll('.toggle').forEach((button) => {
     button.addEventListener('click', () => {
         const branch = button.closest('.branch');
-        const collapsed = branch.classList.toggle('collapsed');
-        button.textContent = collapsed ? '▸' : '▾';
-        button.setAttribute('aria-expanded', (!collapsed).toString());
+        toggleBranch(branch);
+    });
+});
+
+document.querySelectorAll('.branch > .row .label').forEach((label) => {
+    label.tabIndex = 0;
+    label.setAttribute('role', 'button');
+
+    label.addEventListener('click', () => {
+        toggleBranch(label.closest('.branch'));
+    });
+
+    label.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') {
+            return;
+        }
+
+        event.preventDefault();
+        toggleBranch(label.closest('.branch'));
     });
 });
 
@@ -217,6 +240,15 @@ function renderScene(sceneId) {
             image.alt = scene.title;
             imageSlot.appendChild(image);
         });
+
+        if (sceneImages.length > 0) {
+            const satGuy = document.createElement('img');
+            satGuy.className = 'adventure-ending-sat-guy';
+            satGuy.src = 'img/sat-guy.png';
+            satGuy.alt = '';
+            satGuy.setAttribute('aria-hidden', 'true');
+            imageSlot.appendChild(satGuy);
+        }
 
         choices.appendChild(imageSlot);
 

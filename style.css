@@ -136,7 +136,8 @@ body {
     display: grid;
     grid-template-columns: 210px 1fr;
     gap: 0;
-    max-height: calc(100vh - 206px);
+    height: calc(100vh - 206px);
+    min-height: 260px;
     margin: 3px;
 }
 .xp-sidebar {
@@ -185,9 +186,39 @@ body {
 .container {
     min-width: 0;
     padding: 18px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
     border: 1px solid #7f9db9;
     background: #fff;
+    scrollbar-color: #c7c2aa #ece9d8;
+    scrollbar-width: thin;
+}
+.container::-webkit-scrollbar,
+.xp-sidebar::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+}
+.container::-webkit-scrollbar-track,
+.xp-sidebar::-webkit-scrollbar-track {
+    border-left: 1px solid #7f9db9;
+    background: #ece9d8;
+}
+.container::-webkit-scrollbar-thumb,
+.xp-sidebar::-webkit-scrollbar-thumb {
+    border: 1px solid #7f9db9;
+    background: linear-gradient(90deg, #f8f5e7 0%, #d8d2bd 50%, #f8f5e7 100%);
+    box-shadow: inset 1px 1px 0 #fff;
+}
+.container::-webkit-scrollbar-button,
+.xp-sidebar::-webkit-scrollbar-button {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #7f9db9;
+    background: linear-gradient(180deg, #fff 0%, #d8d2bd 100%);
+}
+.container::-webkit-scrollbar-corner,
+.xp-sidebar::-webkit-scrollbar-corner {
+    background: #ece9d8;
 }
 .desktop-icon,
 .little-guy {
@@ -250,7 +281,12 @@ body {
     padding: 0;
 }
 .label {
+    cursor: pointer;
     font-weight: 600;
+}
+.label:focus-visible {
+    outline: 1px dotted #111;
+    outline-offset: 2px;
 }
 .children {
     margin: 6px 0 0 22px;
@@ -423,6 +459,7 @@ a:hover {
     color: #267326;
 }
 .adventure-ending-image-slot {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 8px;
@@ -437,6 +474,17 @@ a:hover {
     width: 100%;
     max-height: min(304px, 40vh);
     object-fit: contain;
+}
+.adventure-ending-sat-guy {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 53px;
+    height: 52px;
+    image-rendering: pixelated;
+    object-fit: contain;
+    pointer-events: none;
+    transform: translate(-50%, calc(-50% - 15px));
 }
 .adventure-ending-caption {
     margin: -2px 0 0;
@@ -611,7 +659,8 @@ a:hover {
 
     .xp-explorer-body {
         grid-template-columns: 1fr;
-        max-height: calc(100vh - 190px);
+        height: calc(100vh - 190px);
+        min-height: 220px;
     }
 
     .xp-sidebar {
