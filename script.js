@@ -174,7 +174,7 @@ const scenes = {
     },
     bikeEnding: {
         title: 'Ending: Two Wheels',
-        text: 'With no long-distance experience, you decide to cycle 100 miles from London to the cliffs od Dover. It takes 12 hours.',
+        text: 'With no long-distance experience, you decide to cycle 100 miles from London to the cliffs of Dover. It takes 12 hours.',
         image: 'img/dover.JPG',
         choices: []
     },
