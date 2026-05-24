@@ -67,7 +67,7 @@ const scenes = {
         choices: [
             ['Go skiing in the Alps', 'skiingEnding'],
             ['Go motorbiking in Vietnam', 'vietnamEnding'],
-            ['Island hopping in the Philippines', 'cityBreakEnding']
+            ['Island hopping in the Philippines', 'philippinesEnding']
         ]
     },
     houseFixes: {
@@ -105,7 +105,7 @@ const scenes = {
     },
     goOutside: {
         title: 'Go Outside',
-        text: 'Fresh air has been detected. This is either restorative or a trap, but the little guy seems confident.',
+        text: 'What should we do?',
         choices: [
             ['Go to badminton', 'badmintonEnding'],
             ['Go for a bike ride', 'bikeEnding'],
@@ -114,10 +114,10 @@ const scenes = {
     },
     creativeOutlet: {
         title: 'Creative Outlet',
-        text: 'A half-finished idea rattles around in the project drawer. It is either inspiration or a maintenance burden with branding.',
+        text: 'Which of the 200 unfinished projects should we work on?',
         choices: [
-            ['Take and edit some pictures', 'photoEnding'],
-            ['Work on your robot buddy project', 'matrixEnding'],
+            ['Take and edit some photos', 'photoEnding'],
+            ['Work your robot buddy', 'matrixEnding'],
             ['Finish your Halloween costume', 'costumeEnding']
         ]
     },
@@ -128,7 +128,7 @@ const scenes = {
     },
     ironingBoardEnding: {
         title: 'Ending: Load-Bearing PLA',
-        text: 'The ironing board stands again. You do not fully trust it, but you do respect it.',
+        text: 'The ironing board stands again. You do not fully trust it, but its better than the wobble.',
         choices: []
     },
     teaEnding: {
@@ -147,18 +147,19 @@ const scenes = {
         choices: []
     },
     skiingEnding: {
-        title: 'Ending: Alps Mode',
-        text: 'You book skiing in the Alps. Everything is suddenly more expensive, but also covered in snow, so it feels worth it.',
+        title: 'Ending: Black Run',
+        text: 'Ski trip with the boys. Fast runs, hot tub, empty wallet.',
         image: 'img/ski.JPG',
         choices: []
     },
     vietnamEnding: {
-        title: 'Ending: Vietnam on Two Wheels',
-        text: 'You book Vietnam and immediately start watching motorbike route videos. This is either preparation or escalation.',
+        title: 'Ending: Ha Giang Loop',
+        text: 'Pretty damn good.',
         image: 'img/vietnam.JPG',
+        caption: 'Một, hai, ba, zô',
         choices: []
     },
-    cityBreakEnding: {
+    philippinesEnding: {
         title: 'Ending: Snorkle fiend',
         text: 'Swimming with a turtle was pretty cool.',
         images: ['img/philippines-1.JPG', 'img/philippines-2.JPG'],
