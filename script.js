@@ -55,10 +55,10 @@ const scenes = {
         introImage: 'img/little-guy.png',
         text: '"You\'ve been working and rotting inside for 2 days, lets get you out of that funk!" \n Okay.. not sure how he knows that. Guess he\'s got a point though.',
         choices: [
-            ['The house is a mess, lets knock off some tasks', 'houseFixes'],
             ['I really need to get outside', 'goOutside'],
             ['My brain needs a creative outlet right now', 'creativeOutlet'],
-            ['Book a flight', 'bookFlight']
+            ['Book a flight', 'bookFlight'],
+            ['The house is a mess, lets knock off some tasks', 'houseFixes']
         ]
     },
     bookFlight: {
